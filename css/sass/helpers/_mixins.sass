@@ -1,0 +1,36 @@
+@mixin small
+    @media (max-width: 767px)
+        @content
+
+@mixin medium
+    @media (min-width: 768px) and (max-width: 991px)
+        @content
+
+@mixin large
+    @media (min-width: 992px) and (max-width: 1199px)
+        @content
+
+@mixin xLarge
+    @media (min-width: 1200px)
+        @content
+
+
+@mixin overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+@mixin prefixer($property, $value, $prefixs: ())
+    @each $prefix in $prefixs
+        #{'-' + $prefix + '-' + $property}: $value
+    #{$property}: $value
+
+@mixin keyFrame($animation-name)
+    @-webkit-keyframes #{$animation-name}
+        @content
+    @-moz-keyframes #{$animation-name}
+        @content
+    @keyframes #{$animation-name}
+        @content

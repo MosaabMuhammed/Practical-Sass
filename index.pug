@@ -1,0 +1,78 @@
+//output: index.html
+
+doctype html
+html(dir="rtl")
+    head    
+        title Practical SASS
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="css/normalize.min.css")
+        link(rel="stylesheet" href="css/font-awesome.min.css")
+        link(rel="stylesheet" href="css/home.css")
+        link(rel="stylesheet" href="css/home_rtl.css")
+    body
+        .header
+            .container
+                .logo
+                    h1  Composition
+                    p   Free PSD Transformer Website
+                .strikes
+                    each val in [1, 2, 3]
+                        span
+                .navbar
+                    - const links = ["Home", "About", "Templates", "Style Demo", "Contact Us"]
+                    ul
+                        each link in links
+                            li 
+                                a(href="#")= link
+        .slider
+            .container
+                q
+                    | Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                img(src="images/slider.jpg" alt="slider")
+                ul.bullets
+                    - for(i = 0; i < 5; i++) {
+                        - if(i == 0 ) {
+                            li.active
+                        - }
+                        li
+                    - }
+        .services
+            .container
+                .subHeader
+                    h2  Our Services
+                - const values = ["home", "gear", "phone"];
+                each val in values
+                    .service-box
+                        h2  
+                            i(class="fa fa-" + val)&nbsp;
+                            span Testing Title
+                        p.
+                            Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        a(href="#", target="_blank") Read More...
+
+        .staff
+            .container
+                .subHeader
+                    h2  Our Staff
+                each val in [1, 2, 3, 4, 5]
+                    .staff-box
+                        img(src="https://placehold.it/200x200/ddd" alt="avatar")
+                        h2
+                            span.name Name:
+                            span Mosaab
+                        p.
+                            Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        a(href="#", target="_blank") View Profile...
+        .footer
+            .container
+                p.
+                    &copy; All Rights Reserved 
+                p.
+                    Designed by Mosaab Muhammed
+        script(src="js/jquery-3.2.1.min.js")
+        script
+            | $(function(){
+            |    $(".strikes").on('click', function(){
+            |        $(".navbar").slideToggle();
+            |    });
+            | });

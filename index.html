@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <title>Practical SASS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/home_rtl.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <h1> Composition</h1>
+          <p>  Free PSD Transformer Website</p>
+        </div>
+        <div class="strikes"><span></span><span></span><span></span>
+        </div>
+        <div class="navbar">
+          <ul>
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">About</a></li>
+            <li> <a href="#">Templates</a></li>
+            <li> <a href="#">Style Demo</a></li>
+            <li> <a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="container">
+        <q>Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</q><img src="images/slider.jpg" alt="slider">
+        <ul class="bullets">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <div class="services">
+      <div class="container">
+        <div class="subHeader">
+          <h2> Our Services</h2>
+        </div>
+        <div class="service-box">
+          <h2> <i class="fa fa-home">&nbsp;</i><span>Testing Title</span></h2>
+          <p>Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><a href="#" target="_blank">Read More...</a>
+        </div>
+        <div class="service-box">
+          <h2> <i class="fa fa-gear">&nbsp;</i><span>Testing Title</span></h2>
+          <p>Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><a href="#" target="_blank">Read More...</a>
+        </div>
+        <div class="service-box">
+          <h2> <i class="fa fa-phone">&nbsp;</i><span>Testing Title</span></h2>
+          <p>Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><a href="#" target="_blank">Read More...</a>
+        </div>
+      </div>
+    </div>
+    <div class="staff">
+      <div class="container">
+        <div class="subHeader">
+          <h2> Our Staff</h2>
+        </div>
+        <div class="staff-box"><img src="https://placehold.it/200x200/ddd" alt="avatar">
+          <h2><span class="name">Name:</span><span>Mosaab</span></h2>
+          <p>Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><a href="#" target="_blank">View Profile...</a>
+        </div>
+        <div class="staff-box"><img src="https://placehold.it/200x200/ddd" alt="avatar">
+          <h2><span class="name">Name:</span><span>Mosaab</span></h2>
+          <p>Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><a href="#" target="_blank">View Profile...</a>
+        </div>
+        <div class="staff-box"><img src="https://placehold.it/200x200/ddd" alt="avatar">
+          <h2><span class="name">Name:</span><span>Mosaab</span></h2>
+          <p>Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><a href="#" target="_blank">View Profile...</a>
+        </div>
+        <div class="staff-box"><img src="https://placehold.it/200x200/ddd" alt="avatar">
+          <h2><span class="name">Name:</span><span>Mosaab</span></h2>
+          <p>Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><a href="#" target="_blank">View Profile...</a>
+        </div>
+        <div class="staff-box"><img src="https://placehold.it/200x200/ddd" alt="avatar">
+          <h2><span class="name">Name:</span><span>Mosaab</span></h2>
+          <p>Lorem ipsum dolor sit amet, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><a href="#" target="_blank">View Profile...</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <p>&copy; All Rights Reserved </p>
+        <p>Designed by Mosaab Muhammed</p>
+      </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+      $(function(){
+         $(".strikes").on('click', function(){
+             $(".navbar").slideToggle();
+         });
+      });
+    </script>
+  </body>
+</html>

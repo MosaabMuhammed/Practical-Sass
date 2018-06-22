@@ -1,0 +1,293 @@
+@import "sass/helpers/mixins"
+@import "sass/components/subHeader"
+@import "sass/helpers/variables"
+
+$float_left: right
+$float_right: left
+
+$textRight: left
+$textLeft: right
+
+
+.header
+    overflow: hidden
+    margin-top: 20px
+    border-bottom: 2px solid $secondColor
+    position: relative
+    .logo
+        width: 30%
+        float: $float_left
+        @include small
+            width: 50%
+            margin-right: 5%
+            margin-left: 0
+            float: none
+        @include medium
+            float: none
+            text-align: center
+            margin: auto
+        @include large
+            float: none
+            text-align: center
+            margin: auto
+        h1
+            text-transform: uppercase
+            text-align: center
+            font-weight: bold
+            @include small
+                text-align: $textLeft
+                font-size: 1.8em !important
+        p
+            color: #5f5f5f
+            text-align: center
+            @include small
+                // width: 185%
+                text-align: $textLeft
+    .strikes
+        display: none
+        width: 40px
+        background-color: $mainColor
+        padding: 9px
+        margin: 20px
+        position: absolute
+        top: 10px
+        left: 15px
+        &:hover
+            cursor: pointer
+        @include prefixer(border-radius, 10px, webkit moz o)
+        @include prefixer(box-shadow, 0px 0px 10px #777, webkit moz o)
+        @include small
+            display: block
+        span
+            display: block
+            height: 3px
+            widht: 75%
+            background-color: white
+            &:hover
+                cursor: pointer
+            &:not(:last-of-type)
+                margin-bottom: 5px
+    .navbar
+        width: 70%
+        float: $float_left
+        text-align: center
+        display: block
+        @include small
+            float: none
+            margin: auto
+            width: 80%
+        @include medium
+            float: none
+            margin: auto
+            width: 90% !important
+        @include large
+            float: none
+            margin: auto
+            width: 80%
+        ul
+            list-style-type: none
+            padding: 0
+            background-color: $mainColor
+            @include prefixer(border-radius, 10px, webkit moz o)
+            overflow: hidden
+            margin-top: 32px
+            li
+                float: $float_left
+                display: block
+                padding: 20px 10px
+                width: 20%
+                text-align: center
+                @include small
+                    float: none !important
+                    width: 100%
+                a
+                    text-decoration: none
+                    color: white
+                    font-size: 22px
+                    @include small
+                        display: block
+                        text-align: center
+                    &:hover
+                        color: #CCC
+.slider
+    .container
+        q
+            font:
+                size: 19px
+                family: sans-serif
+                style: italic
+            display: block
+            width: 80%
+            margin: auto
+            margin-top: 30px
+            margin-bottom: 30px
+            color: #696969
+            line-height: 24px
+            text-align: center
+        img
+            width: 80%
+            display: block
+            margin: auto
+
+        .bullets
+            list-style-type: none
+            display: block
+            width: 208px
+            margin: 20px auto
+        li
+            display: inline-block
+            width: 20px
+            height: 20px
+            background-color: #ccc
+            border: 2px solid #CCC
+            @include prefixer(border-radius, 10px, webkit moz o)
+            &.active,
+            &:hover
+                cursor: pointer
+                border: 2px solid black
+                background-color: #DDD
+                @include prefixer(box-shadow, 2px 2px 10px #aaa, webkit moz)
+.services
+    .container
+        overflow: hidden
+        .subHeader
+            position: relative
+            h2
+                @include subHeader
+        .service-box
+            width: (100% / 3)
+            float: $float_left
+            &:not(:last-of-type)
+                padding-right: 20px
+            &:last-of-type
+                @include medium
+                    width: fit-content
+            @include small
+                float: none
+                width: 70%
+                margin: auto
+                text-align: center
+                &:not(:last-of-type)
+                    margin-bottom: 50px
+            @include medium
+                width: (100% / 2)
+                margin: auto
+                text-align: center
+                &:not(:last-of-type)
+                    margin-bottom: 50px
+
+            h2
+                color: #353535
+                text-align: center
+                i
+                    font-size: 55px
+                    display: block
+                    margin-bottom: 10px
+            p
+                color: gray
+                font-family: "segoe ui"
+                line-height: 22.4px
+                @include small
+                    width: 80%
+                    margin: auto
+                @include medium
+                    width: 80%
+                    margin: auto
+            a
+                color: $mainColor
+                text-decoration: none
+                font-weight: bold
+                text-align: center
+                display: block
+                margin-top: 10px
+.staff
+    .container
+        overflow: hidden
+        .subHeader
+            position: relative
+            h2
+                @include subHeader
+                margin-bottom: 50px
+        .staff-box
+            width: (100% / 5)
+            float: $float_left
+            padding-right: 10px
+            &:last-of-type
+                @include medium
+                    width: fit-content
+            &:nth-last-of-type(2)
+                @include large
+                    margin-left: 18%
+            @include small
+                float: none
+                width: 70%
+                margin: auto
+                text-align: center
+                &:not(:last-of-type)
+                    margin-bottom: 50px
+            @include medium
+                width: (100% / 2)
+                margin: auto
+                text-align: center
+                &:not(:last-of-type)
+                    margin-bottom: 50px
+            @include large
+                width: (100% / 3)
+                margin: auto
+                text-align: center
+                &:not(:last-of-type)
+                    margin-bottom: 50px
+            h2
+                color: #353535
+                .name
+                    text-align: center
+                    display: block
+                span:not(:first-of-type)
+                    color: gray
+                    display: block
+                    text-align: center
+            p
+                color: gray
+                font-family: "segoe ui"
+                line-height: 22.4px
+            a
+                color: $mainColor
+                text-decoration: none
+                display: block
+                text-align: center
+.footer
+    width: 100%
+    background-color: $mainColor
+    min-height: 100px
+    margin-top: 50px
+    position: relative
+    p
+        line-height: 100px
+        margin-bottom: 0
+        margin-top: 0
+        color: white
+        display: inline-block
+        &:first-of-type
+            float: $float_left
+            @include small
+                display: block
+                width: 100%
+                margin: auto
+                text-align: center
+                float: none
+                line-height: 0
+                position: absolute
+                top: 38%
+                transform: translateY(50%)
+        &:last-of-type
+            float: $float_right
+            @include small
+                display: block
+                width: 100%
+                margin: auto
+                text-align: center
+                float: none
+                line-height: 0
+                position: absolute
+                top: 68%
+                transform: translateY(50%)

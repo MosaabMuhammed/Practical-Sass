@@ -1,0 +1,15 @@
+*
+    @include prefixer(box-sizing, border-box, webkit moz)
+
+.container
+    margin: auto
+    padding-right: 15px
+    padding-left: 15px
+    @include small
+        width: auto
+    @include medium
+        width: 750px
+    @include large
+        width: 970px
+    @include xLarge
+        width: 1170px
